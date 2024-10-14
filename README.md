@@ -3,26 +3,45 @@
 ## Abstract
 Ancient murals embody profound historical, cultural, scientifc, and artistic values, yet many are aficted with challenges such as pigment shedding or missing parts. While deep learning-based completion techniques have yielded remarkable results in restoring natural images, their application to damaged murals has been unsatisfactory due to data shifts and limited modeling efcacy. This paper proposes a novel progressive reasoning network designed specifcally for mural image completion, inspired by the mural painting process. The proposed network comprises three key modules: a luminance reasoning module, a sketch reasoning module, and a color fusion module. The frst two modules are based on the double-codec framework, designed to infer missing areas’ luminance and sketch information. The fnal module then utilizes a paired-associate learning approach to reconstruct the color image. This network utilizes two parallel, complementary pathways to estimate the luminance and sketch maps of a damaged mural. Subsequently, these two maps are combined to synthesize a complete color image. Experimental results indicate that the proposed network excels in restoring clearer structures and more vivid colors, surpassing current state-of-the art methods in both quantitative and qualitative assessments for repairing damaged images. 
 
+
+
 Keywords Image completion, Image inpainting, Deep learning, Ancient murals, Pigment shedding
+
+
 
 [[`article`](https://doi.org/10.1038/s41598-024-72368-1)]
 
-![PRN](/Figures/Network.png)  
-Network architecture of our PRN.
 
 
-## Requirements
-Python==3.9
+![PRN](/Figures/Network.png)    
 
-Pytorch==1.11.0+cu113
+Network architecture of our PRN.  
+
+![PRN](/Figures/Places2.png)      
+
+our PRN for three testing images randomly selected from the Places2 dataset.  
+
+![PRN](/Figures/Murals2.png)    
+
+our PRN for three testing images randomly selected from the Murals2 dataset. 
 
 
-## Image inpainting using existing models
+
+## Requirements  
+Python==3.9  
+
+Pytorch==1.11.0+cu113  
+
+
+## Image inpainting using existing models  
 To complete mural Image Inpainting, place the images to be repaired into the folder **./testimg**, place the mask into the folder **./mask**, (we recommend naming both "1.jpg") use
+
+
 ```
-python test.py
+python test.py 
 ```   
 The final inpainting result can be viewed in the folder **./finalresult**.
+
 
 ## Use your own data set for network training
 The training of the Brightness Map model is the same as that of the Sketch Map model, use
