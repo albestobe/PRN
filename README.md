@@ -9,7 +9,7 @@ Keywords Image completion, Image inpainting, Deep learning, Ancient murals, Pigm
 
 
 
-[[`article`](https://doi.org/10.1038/s41598-024-72368-1)]
+PRN [[`article`](https://doi.org/10.1038/s41598-024-72368-1)]
 
 
 
